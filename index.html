@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Random Alexa Laugh</h2>
+
+<script>
+(function alexa_laugh() {
+    var rand = Math.round(Math.random()*600000+30000); // random between 30 seconds and 10 minutes
+    a = new Audio('alexa_ha.ogg');
+
+    setTimeout(function() {
+            a.play(); // Play the audio
+            alexa_laugh(); // Call the loop function again
+    }, rand);
+}());
+</script>
+
+</body>
+</html>
